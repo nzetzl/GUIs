@@ -1,0 +1,20 @@
+import javax.swing.*;
+import java.awt.Component;
+
+
+public class PopUps extends JDialog {
+    
+    public static void main(String[] args) {
+        JOptionPane popUp = new JOptionPane("You need to Upgrade your software!");
+        Icon icon = UIManager.getIcon("OptionPane.warningIcon");
+        popUp.setIcon(icon);
+        JDialog d = popUp.createDialog(null, "You Got Hacked!");
+        d.setLocationRelativeTo(null);
+        while(true) {
+            for (int i = 0; i < 4; i++) {
+                d.setLocation(0, 10);
+                d.setVisible(true);
+            }
+        }
+    }
+}
